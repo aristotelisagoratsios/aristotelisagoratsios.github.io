@@ -203,7 +203,7 @@ input, select, textarea {
 
 	h1 {
 		font-size: 2.75em;
-	}
+	  }
 
 		h1.major {
 			margin: 0 0 1.3em 0;
@@ -2627,6 +2627,16 @@ input, select, textarea {
 			.image.main img {
 				width: 100%;
 			}
+			
+			 img {
+				max-width: 100%;
+				height: auto;
+				display: table;
+				margin: 0 auto;
+			}
+			
+	
+			
 
 /* List */
 
@@ -3482,8 +3492,13 @@ input, select, textarea {
 
 	   .navbar-toggler {
 		   
-		   background-color:#3ca9e9;  
-	   }
+		   background-color:#3ca9e9;
+        	padding-top: 1%;
+            padding-bottom: 1%;
+            margin-left:-3%;
+            margin-top:-1%;			
+            font-size:7px;			
+	                   }
 
        nav .navbar-nav li a{
 	   
@@ -3496,10 +3511,14 @@ input, select, textarea {
 			}
 			
 		   .navbar-toggler-icon {
-				
 				border-bottom:none;
-			}
-			
+                font-size: 0.8rem;
+				display: block;
+				border-radius: 1px;
+				
+		                 	}
+
+
 			
  /* Projects */
 			
@@ -3511,7 +3530,7 @@ input, select, textarea {
 				   
 			span{
 			  border-bottom:2px solid white;
-			}	   
+		    	}	   
 				   
 			
 			
@@ -3964,27 +3983,32 @@ input, select, textarea {
 			#intro {
 				background-attachment: scroll;
 			}
-
 		}
 		
 		
-		#logo {
-			
-			margin-top:-40px;
-			margin-left: -19px;
-		}
-		
-		#logo h1 {
-			 font-family: "Georgia", sans-serif;
-			  font-size: 3em;
-			  letter-spacing: -2px;
-			  border-bottom: 1px solid grey;
-			  text-transform: uppercase;
-			 
-		     }
+		  
 			  
 				
-		#intro  h1,p {
+		#intro  h2 {
 			padding-left: 2%;
-		                  }
+		              }
+					  
+			
+			/* Back to Top - Button */
+				
+				#myBtn {
+					  display: flex;
+					  margin: auto;
+					  text-align:center;
+					  z-index: 99;
+					  font-size: 10px;
+					  border: none;
+					  outline: none;
+					  color: white;
+					  cursor: pointer; 
+					  }
+
+			   #myBtn:hover {
+					background-color: #555;
+					       }	  
 		
