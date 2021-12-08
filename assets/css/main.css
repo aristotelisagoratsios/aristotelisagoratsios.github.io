@@ -28,8 +28,9 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
-	line-height: 1;
-}
+	 line-height: 1;
+     }
+	 
 .h-divider{
  margin-top:0px;
  margin-bottom:0px;
@@ -837,7 +838,7 @@ input, select, textarea {
 				flex-wrap: wrap;
 				box-sizing: border-box;
 				align-items: stretch;
-			}
+				}
 
 				.row > * {
 					box-sizing: border-box;
@@ -3986,7 +3987,27 @@ input, select, textarea {
 		}
 		
 		
-		  
+		@media only screen and (max-width: 480px) {
+                               body,  p, h1, h2, h3, span, section { 
+												  padding-left: 0 !important; 
+												  text-align: center !important; 
+												 	 }
+												  }
+	  
+	 
+     	 @media screen and (max-width: 1200px) {
+                          body,  p, h1, h2, h3, span, section { 
+					 padding-left:0 !important; 
+					 text-align: center !important;
+					 }
+					 }
+					
+					
+			about  {
+				    text-align: center !important;
+					 margin:auto !important;
+			        }		
+	  
 			  
 				
 		#intro  h2 {
