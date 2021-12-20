@@ -72,13 +72,13 @@
                                  </section>  
 								  </br>
 								  </br>
-						 <p>I am a graduate of the Department of Industrial Informatics of the University of Western Macedonia in Greece. 
-				        	  My IT experience comes from nearly 10 years of work in Public and Private Education and various IT companies 
-						  as IT Support Technician, Web Developer and Web Designer. There I confirmed my inclination in this field and I believe that 
-						  I could develop my creative thinking and talent.
-						  Also I'm a passionate developer but more importantly I'm passionate about technology.
-						  My expertise is in the area of Responsive Web Design as Web Developer. With every line of code, I strive to make the web a beautiful place.</p>
-						  <p>Shown below are a few of my most recent projects that I worked on.</p>
+							   <p>I am a graduate of the Department of Industrial Informatics of the University of Western Macedonia in Greece. 
+							      My IT experience comes from nearly 10 years of work in Public and Private Education and various IT companies 
+								  as IT Support Technician, Web Developer and Web Designer. There I confirmed my inclination in this field and I believe that 
+								  I could develop my creative thinking and talent.
+							      Also I'm a passionate developer but more importantly I'm passionate about technology.
+							      My expertise is in the area of Responsive Web Design as Web Developer. With every line of code, I strive to make the web a beautiful place.</p>
+								<p>Shown below are a few of my most recent projects that I worked on.</p>
 						     </div>
 						</div>
 						<!-- Projects -->	
@@ -135,7 +135,10 @@
 						<br>
 						<h1>Projects</h1>
 					</br>
-					<img  width="50%"  src="images/projects-photo.png" alt="projects" data-position="25% 25%" />
+					  <a href="images/projects-photo.png" target="_blank">
+                      <img width="50%"  src="images/projects-photo.png" alt="projects" data-position="25% 25%" style="max-width: 100%;height: auto;vertical-align:middle;border-style: none;">
+                      </a>
+                       </br>
 						<br/>
                         </br>						
 					
@@ -443,6 +446,37 @@
 							<div class="h-divider"></div>
 							
 							
+							
+							<!-- Mobile App Project -->
+							 <section>
+								<br/>
+								<div id="content">
+									<!-- Descripcion -->
+										<h2><span>Email Client Mobile App</span></h2>
+										   <p>Cordova</p>
+							    	  <p><a href="https://webdevbuilder.tech/9-mobileapps/index.html" target="_blank" class="button">View The Project</a> </p>
+	                                   <!-- Email Client Mobile App -->
+								        <a href="images/mobileapps/mobileapps-project-photo-1.png" target="_blank">
+										  <img width="50%"  src="images/mobileapps/mobileapps-project-photo-1.png" alt="projects" data-position="25% 25%" style="max-width: 100%;height: auto;vertical-align:middle;border-style: none;">
+										</a>
+	                                    </br>
+										<a href="images/mobileapps/mobileapps-project-photo-2.png" target="_blank">
+										  <img width="50%"  src="images/mobileapps/mobileapps-project-photo-2.png" alt="projects" data-position="25% 25%" style="max-width: 100%;height: auto;vertical-align:middle;border-style: none;">
+										</a>
+										</br>
+										<a href="images/mobileapps/mobileapps-project-photo-3.png" target="_blank">
+										  <img width="25%"  src="images/mobileapps/mobileapps-project-photo-3.png" alt="projects" data-position="25% 25%" style="max-width: 100%;height: auto;vertical-align:middle;border-style: none;">
+										</a>
+										</br>
+									  <!-- Button view code -->
+										<p><a href="https://aristotelisagoratsios.github.io/aristotelis-email-client/" target="_blank" class="button">View The Code</a></p>
+										<br />
+								</div>
+							 </section>
+
+							<div class="h-divider"></div>
+							
+							
 				
 			<section id="three">
 				<!-- Three -->
@@ -522,44 +556,45 @@
 				  document.documentElement.scrollTop = 0;
 				}
 				
-	
-      <!-- Right Click Disabled -->
-		var msg = "Right click disabled"; //change this message to a message of your own if you want
-		var showMsg = 0; //change this to 0 if you do not want to show any popup messages when the user right clicks
+				
 
-		function internetExplorerRightClick(){ //code to handle right clicks in Internet Explorer
-		if (document.all){
-		if (showMsg == 0){
-		alert(msg);
-		}
-		return false;
-		}
-		}
+			<!-- Right Click Disabled -->
+				var msg = "Right click disabled"; //change this message to a message of your own if you want
+				var showMsg = 0; //change this to 0 if you do not want to show any popup messages when the user right clicks
 
-		function firefoxRightClick(e){ //code to handle right clicks in Firefox and Chrome (as well as other obsolete browsers such as Netscape)
-		if ((document.layers) || (document.getElementById && !document.all)) {
-		if (e.which==2 || e.which==3){
-		if (showMsg == 1){
-		alert(msg);
-		}
-		return false;
-		}
-		}
-		}
+				function internetExplorerRightClick(){ //code to handle right clicks in Internet Explorer
+				if (document.all){
+				if (showMsg == 0){
+				alert(msg);
+				}
+				return false;
+				}
+				}
 
-		if (document.layers){
-		document.captureEvents(Event.MOUSEDOWN);
-		document.onmousedown=firefoxRightClick;
-		}
-		else{
-		document.onmouseup=firefoxRightClick;
-		document.oncontextmenu=internetExplorerRightClick;
-		}
+				function firefoxRightClick(e){ //code to handle right clicks in Firefox and Chrome (as well as other obsolete browsers such as Netscape)
+				if ((document.layers) || (document.getElementById && !document.all)) {
+				if (e.which==2 || e.which==3){
+				if (showMsg == 1){
+				alert(msg);
+				}
+				return false;
+				}
+				}
+				}
 
-		document.oncontextmenu=new Function("return false");
+				if (document.layers){
+				document.captureEvents(Event.MOUSEDOWN);
+				document.onmousedown=firefoxRightClick;
+				}
+				else{
+				document.onmouseup=firefoxRightClick;
+				document.oncontextmenu=internetExplorerRightClick;
+				}
+
+				document.oncontextmenu=new Function("return false");
 
 
-
+				
    </script>
 
 	</body>
