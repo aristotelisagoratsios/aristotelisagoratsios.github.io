@@ -1,0 +1,351 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <title>Demo - Πίνακας μετεωρολογικών σταθμών</title>
+    
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    
+  
+ 
+<link rel="stylesheet" href="https://www.webdevbuilder.tech/meteo-demo/main.css">
+<link rel="stylesheet" href="https://www.stravon.gr/pinakas/dokimi.css">
+<script src="https://www.webdevbuilder.tech/meteo-demo/main.js"></script>
+<script type="text/javascript" src="https://www.stravon.gr/pinakas/scripts/functions.js"></script>
+<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+</head>
+
+   <body>
+   
+<center>
+
+<h1>Demo - Πίνακας μετεωρολογικών σταθμών</h1>
+<img id="logo" src="images/icon.png" alt="logo" width="150" height="150">
+
+
+<br>
+<br>
+
+ <table class="table1" style="width:1270; background-color:#4169E1; height:40;">
+ <thead style="background-color:#4169E1;">
+  <tr class=>
+    <th width="3%" id="st1" style="background-color:#4169E1;">
+    <span onclick='show(1)'><img id="im1"> Ζωντανά</span>
+    </th>
+    <th width="3%" id="st4" style="background-color:#4169E1;">
+    <span onclick='show(4)'><img id="im4"> Σήμερα</span>
+    </th>
+    <th width="3%" id="st2" style="background-color:#4169E1;">
+    <span onclick='show(2)'><img id="im2"> Μηνιαίος</span>
+    </th>
+    <th width="3%" id="st3" style="background-color:#4169E1;">
+    <span onclick='show(3)'><img id="im3"> Ετήσιος</span>
+  </th>
+ </tr>
+ </thead>
+</table>
+<script type="text/javascript">
+change();
+</script>
+
+<table id="t1" class="sortable" style="width:1270px;">
+<thead style="color:white;"> 
+<tr id="t1header" >
+            <th width="3%" style="background-color:#4169E1;">Περιφ.
+            </th>
+            <th width="8%" style="background-color:#4169E1;">Πόλη<br>
+            Περιοχή
+            </th>
+            <th width="1%" style="background-color:#4169E1;">Yψομ.
+            (m)
+            </th>
+            <th width="1%" style="background-color:#4169E1;">Ιδιοκ
+            τησία
+            </th>
+            <th width="1%" style="background-color:#4169E1;">Ημέρα
+            </th>
+            <th width="2%" style="background-color:#4169E1;">Χρόνος
+            Aναν.
+            </th>
+            <th width="3%" style="background-color:#4169E1;">Θερμ.
+            (°C)
+            <th width="2%" style="background-color:#4169E1;">Θερμ.
+            Εύρος
+            (°C)
+            </th>
+            <th width="1%" style="background-color:#4169E1;">Υγρασ.
+            (%)</th>
+            <th width="1%" style="background-color:#4169E1;">Ατμ.
+            Πίεση
+            (hPa)
+            </th>
+            <th width="1%" style="background-color:#4169E1;">Άνεμ.
+            (km/h)
+            </th>
+            <th width="2%" style="background-color:#4169E1;">Διεύθ.
+            Ανέμου
+            </th>
+            <th width="1%" style="background-color:#4169E1;">Ραγδ.
+            (mm/h)
+            </th>
+            <th width="1%" style="background-color:#4169E1;">Υετός
+            Σήμερα
+            (mm)
+            </th>
+            <th width="1%" style="background-color:#4169E1;">Yετός
+            Μήνα
+            (mm)
+            </th>
+            <th width="1%" style="background-color:#4169E1;">Υετός
+            Έτους
+            (mm)
+            </th>
+
+            <th width="2%" style="background-color:#4169E1;">Καιρός
+            </th>
+            </tr>
+            </thead>
+            <tbody id="tra">
+            <tr><td>Κεντρική Μακεδονία</td><td><font color=black><a href="https://stravon.gr/stations/palaiosmylotopos/ZWNTANA.htm">Παλαιός Μυλότοπος<p>Ν.Πέλλας</p></a></font></td><td>9</td><td title="Εθνικό Αστεροσκοπείο Αθηνών">NOA</td><td>10/03/2022</td><td>41' πρίν</td><td bgcolor="4169E1"><font color="">1.8</font></td><td>3.8</td><td bgcolor="">83</td><td>1017.7</td><td bgcolor="4682B4">14.5</td><td><img src=http://www.stravon.gr/pinakas/img/WSW.png width="40" height="40"></td><td>0.0</td><td bgcolor="00FFFF"><font color="">9.6</font></td><td>78.2</td><td bgcolor="4B0082"><font color="#ffffff">259.2</font></td><td><img src ='http://www.stravon.gr/pinakas/kairos/icons/mera-ka8aros.png' width='50'  height='50' title='Καθαρός'\></td></tr><tr><td>Ανατολικής Αττικής</td><td><font color=black><a href="https://stravon.gr/stations/kalivia/ZWNTANA.htm">Καλύβια<p>Ανατολικής Αττικής</p></a></font></td><td>20</td><td title="Εθνικό Αστεροσκοπείο Αθηνών">NOA</td><td>10/03/2022</td><td id>31' πρίν</td><td bgcolor="6495ED"><font color="">5.2</font></td><td>5.5</td><td bgcolor="">60</td><td>1017.7</td><td bgcolor="8FBC8F">9.7</td><td><img src=http://www.stravon.gr/pinakas/img/SE.png width="40" height="40"></td><td>0.0</td><td bgcolor="E6E6FA"><font color="">0.8</font></td><td>18.4</td><td bgcolor="7B68EE"><font color="#ffffff">172.2</font></td><td><img src ='http://www.stravon.gr/pinakas/kairos/icons/mera-ka8aros.png' width='50'  height='50' title='Καθαρός'\></td></tr><tr><td>Κεντρική Μακεδονία</td><td><font color=black><a href="https://stravon.gr/stations/kryavrysi/ZWNTANA.htm">Κρύα Βρύση<p>Ν.Πέλλας</p></a></font></td><td>4</td><td title="Εθνικό Αστεροσκοπείο Αθηνών">NOA</td><td>10/03/2022</td><td>41' πρίν</td><td bgcolor="87CEEB"><font color="">3.3</font></td><td>4.6</td><td bgcolor="">70</td><td>1016.3</td><td bgcolor="40E0D0">3.2</td><td><img src=http://www.stravon.gr/pinakas/img/ENE.png width="40" height="40"></td><td>0.0</td><td bgcolor="#00c8fe"><font color="">9.8</font></td><td>63.8</td><td bgcolor="663399"><font color="#ffffff">196.2</font></td><td><img src ='http://www.stravon.gr/pinakas/kairos/icons/mera-ka8aros.png' width='50'  height='50' title='Καθαρός'\></td></tr><tr><td>Κεντρική Μακεδονία</td><td><font color=black><a href="https://stravon.gr/stations/konstantia/ZWNTANA.htm">Κωνσταντία<p>Ν.Πέλλας</p></a></font></td><td>149</td><td title="Εθνικό Αστεροσκοπείο Αθηνών">NOA</td><td>10/03/2022</td><td>21' πρίν</td><td bgcolor="1E90FF"><font color="">6.1</font></td><td>4.4</td><td bgcolor="">72</td><td>1014</td><td bgcolor="5F9EA0">6.4</td><td><img src=http://www.stravon.gr/pinakas/img/SSE.png width="40" height="40"></td><td>0.0</td><td bgcolor="87CEFA"><font color="">3.6</font></td><td>49.6</td><td bgcolor="483D8B"><font color="#ffffff">176.4</font></td><td><img src ='http://www.stravon.gr/pinakas/kairos/icons/mera-ka8aros.png' width='50'  height='50' title='Καθαρός'\></td></tr>
+            </tbody>
+            </table>
+
+
+            <table id ="t2" style="width:1270; background-color:#4169E1;" class="sortable">
+            <thead>
+            <tr id="t2header">
+            <th width="2%" style="background-color:#4169E1;">
+            Περιφ.
+            </th>
+            <th width="4%" style="background-color:#4169E1;">
+            Σταθμός
+            </th>
+            <th width="2%" style="background-color:#4169E1;">
+            Υψόμετρο
+            (m)
+            </th>
+            <th width="2%" style="background-color:#4169E1;">
+            Mean Temp
+            (°C)
+            </th>
+            <th width="2%" style="background-color:#4169E1;">
+            Max Temp
+            (°C)
+            </th>
+            <th width="2%" style="background-color:#4169E1;">
+            Min Temp
+            (°C)
+            </th>
+            <th width="2%" style="background-color:#4169E1;">
+            Heat Deg 
+            Days
+            </th>
+            <th width="2%" style="background-color:#4169E1;">
+            Cool Deg
+            Days
+            </th>
+            <th width="2%" style="background-color:#4169E1;">
+            Rain
+            (mm)
+            </th>
+            <th width="2%" style="background-color:#4169E1;">
+            Avg Wind
+            (km/h)
+            </th>
+            <th width="2%" style="background-color:#4169E1;">
+            High Gust
+            (km/h)
+            </th>
+            <th width="2%" style="background-color:#4169E1;">
+            Wind Dir
+            </th>
+</tr>
+</thead>
+<tbody id="tra">
+</tbody>
+</table>
+
+<table id="t3" style="width:1270;" class="sortable">
+<thead>
+    <tr id="t3header">
+    <th width="3%" style="background-color:#4169E1;">
+    Περιφ.
+    </th>
+    <th width="8%" style="background-color:#4169E1;">
+    Σταθμός
+    </th>
+    <th width="1%" style="background-color:#4169E1;">
+    Υψόμ.
+    (m)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    Mean Max
+    (°C)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    Mean Min
+    (°C)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    Mean
+    (°C)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    High Temp
+    (°C)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    Low Temp
+    (°C)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    Max 
+    T>=32
+    </th>
+    <th width="3%" style="background-color:#4169E1;">
+    Max
+    T<=0
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    Min
+    T<=0
+    </th>
+    <th width="3%" style="background-color:#4169E1;">
+    Min
+    T<=-18
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    Total 
+    Rain
+    (mm)
+    </th>
+    <th width="3%" style="background-color:#4169E1;">
+    Max Obs.
+    Day
+    </th>
+    <th width="3%" style="background-color:#4169E1;">
+    Avg Wind
+    (km/h)
+    </th>
+    <th width="3%" style="background-color:#4169E1;">
+    High Gust
+    (km/h)
+    </th>
+    <th width="3%" style="background-color:#4169E1;">
+    Wind Dir
+    </th>
+</tr>
+</thead>
+<tbody id="tra" style="background-color:#4169E1;">
+
+</tbody>
+</table>
+<table id="t4" style="width:1270;" class="sortable">
+<thead>
+<tr id="t4header">
+    <th width="3%" style="background-color:#4169E1;">
+    Περιφ.
+    </th>
+    <th width="5%" style="background-color:#4169E1;">
+    Σταθμός
+    </th>
+    <th width="1%" style="background-color:#4169E1;">
+    Yψόμετρο
+    (m)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    High Temp
+    (°C)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    Low Temp
+    (°C)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    High Hum
+    (%)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    Low Hum
+    (%)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    High Dew
+    (°C)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    Low Dew
+    (°C)
+    </th>
+    <th width="1%" style="background-color:#4169E1;">
+    High Bar
+    (hPa)
+    </th>
+    <th width="1%" style="background-color:#4169E1;">
+    Low Bar
+    (hPa)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    High Gust
+    (km/h)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    High Rate
+    (mm/h)
+    </th>
+    <th width="2%" style="background-color:#4169E1;">
+    Sum Rain
+    (mm)
+    </th>
+    <th width="3%" style="background-color:#4169E1;">
+    Low Wind
+    Chill
+    (°C)
+    </th>
+    <th width="3%" style="background-color:#4169E1;">
+    High Heat
+    Index
+    (°C)
+    </th>
+</tr>
+</thead>
+<tbody id="tra">
+<tr><td>Κεντρική Μακεδονία</td></td><td><font color=black><a href="https://www.stravon.gr/stations/palaiosmylotopos/">Παλαιός Μυλότοπος<p>Ν.Πέλλας</p></a></font></td><td>9</td><td bgcolor="#FFEA00"><font color="">3.9</font></td><td bgcolor="#FDDA0D"><font color="">0.1</font></td><td bgcolor="">84</td><td bgcolor="">70</td><td>-0.5</td><td>-3.0</td><td>1017.7</td><td>1013.5</td><td bgcolor="7FFFD4">19.3</td><td bgcolor="A9A9A9">2</td><td bgcolor="00CED1"><font color="">9.6</font></td><td bgcolor="1E90FF"><font color="">-3.8</font></td><td bgcolor="008000"><font color="">3.9</font></td></tr><tr><td>Ανατολικής Αττικής</td><td><font color=black><a href="https://stravon.gr/stations/kalivia/">Καλύβια<p>Ανατολικής Αττικής</p></a></font></td><td>20</td><td bgcolor="ADFF2F"><font color="">6.9</font></td><td bgcolor="#E1C16E"><font color="">1.4</font></td><td bgcolor="">87</td><td bgcolor="">58</td><td>0.5</td><td>-2.4</td><td>1018</td><td>1014.8</td><td bgcolor="DAA520">43.5</td><td bgcolor="ADD8E6">2.2</td><td bgcolor="#00fec8"><font color="">0.8</font></td><td bgcolor="E0FFFF"><font color="">-2.7</font></td><td bgcolor="3CB371"><font color="">6.7</font></td></tr><tr><td>Κεντρική Μακεδονία</td><td><font color=black><a href="https://stravon.gr/stations/kryavrysi/">Κρύα Βρύση<p>Ν.Πέλλας</p></a></font></td><td>4</td><td bgcolor="6B8E23"><font color="">4.3</font></td><td bgcolor="#E4D00A"><font color="">-0.3</font></td><td bgcolor="">80</td><td bgcolor="">67</td><td>-0.7</td><td>-3.8</td><td>1016.5</td><td>1013.6</td><td bgcolor="7B68EE">14.5</td><td bgcolor="C0C0C0">7</td><td bgcolor="B0C4DE"><font color="">9.8</font></td><td bgcolor="00FFFF"><font color="">-0.3</font></td><td bgcolor="00CED1"><font color="">3.9</font></td></tr><tr><td>Κεντρική Μακεδονία</td><td><font color=black><a href="https://stravon.gr/stations/konstantia/">Κωνσταντία<p>Ν.Πέλλας</p></a></font></td><td>149</td><td bgcolor="#FCF55F"><font color="">6.7</font></td><td bgcolor="#FADA5E"><font color="">2.3</font></td><td bgcolor="#FFFAA0">92</td><td bgcolor="">65</td><td>3.5</td><td>0.3</td><td>1014</td><td>1011.3</td><td bgcolor="D2691E">20.9</td><td bgcolor="E0FFFF">2.4</td><td bgcolor="66CDAA"><font color="">3.6</font></td><td bgcolor="B0E0E6"><font color="">0.1</font></td><td bgcolor="2E8B57"><font color="">6.3</font></td></tr>
+</tbody>
+</table>
+</div>
+<br>
+<br>
+<img src="images/meteoweather.png">
+
+<script type="text/javascript">
+
+ $(document).ready(function () {
+            $("span").click(function () {
+            $("#st1").add("#st2").add("#st3").add("#st4")
+            .css("background", "#4169E1");
+            });
+        });
+        
+  
+$(document).ready(function() {
+       $('#st1').add("#st2").add("#st3").add("#st4").click( function() {
+       $(this)
+       .css('background', '#CD853F')
+              });
+            });
+            
+ </script>  
+   
+
+ 
+
+
+  </body>
+</html>
