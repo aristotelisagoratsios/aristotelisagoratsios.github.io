@@ -52,7 +52,7 @@
                        </a>
                        </div>
                        <div class="gr">
-                       <a  href="https://aristotelisagoratsios.github.io/gr/" language='greek'>GR
+                       <a onclick="displayHtml('index.html');" language='greek'>GR
                         <img src="https://flagcdn.com/80x60/gr.png" srcset="https://flagcdn.com/160x120/gr.png 2x, https://flagcdn.com/240x180/gr.png 3x" width="30" height="20" alt="Greece">
                       </a> 
                     </div>                      
@@ -792,6 +792,27 @@
 				}
 
 				document.oncontextmenu=new Function("return false");
+
+               !-- Change Language -->  
+                  var serverPath = 'https://aristotelisagoratsios.github.io/gr/';
+
+                  var loadHtml = function(path, callback) {
+                  var xhr = new XMLHttpRequest();
+                  xhr.open('GET', path, true);
+                  xhr.onreadystatechange = function() {
+                    if (this.readyState !== 4) return;
+                    if (this.status !== 200) return;
+                    callback(this.responseText);
+                  };
+                  xhr.send();
+                  };
+
+                var displayHtml = function(file) {
+                  loadHtml(serverPath + file, function(html) {
+                    document.querySelector('.content').innerHTML = html;
+                  });
+                  return false;
+                };     
                 
 		
    </script>
