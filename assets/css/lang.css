@@ -25,6 +25,10 @@
             width:25px;
             height:15px;
         }
+
+      a:hover {
+         cursor: pointer;
+             }  
   
         
        /* Small devices (portrait tablets and large phones, 725px and up) */
